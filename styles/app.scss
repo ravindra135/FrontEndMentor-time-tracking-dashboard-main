@@ -1,1 +1,29 @@
 /* Written By R Cube Dev */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables : Colors */
+/* Primary */
+$primary-blue: hsl(246, 80%, 60%);
+$pri-light-red: hsl(15, 100%, 70%);//(work)
+$pri-soft-blue: hsl(195, 74%, 62%); //(play)
+$pri-red: hsl(348, 100%, 68%);//(study)
+$pri-lime-green: hsl(145, 58%, 55%);//(exercise)
+$pri-violet: hsl(264, 64%, 52%); //(social)
+$pri-soft-orange: hsl(43, 84%, 65%); //(self care)
+
+/* Neutral */
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$desaturated-blue: hsl(235, 45%, 61%);
+$pale-blue: hsl(236, 100%, 87%);
+
+$fs-def: 18px;
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
