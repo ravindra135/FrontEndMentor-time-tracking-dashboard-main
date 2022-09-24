@@ -9,6 +9,106 @@
 /* Primary */
 /* Neutral */
 body {
-  font-family: 'Rubik', sans-serif; }
+  font-family: 'Rubik', sans-serif;
+  background-color: #0f1424; }
+
+.container {
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px 17px; }
+  .container .profile-card {
+    width: 100%;
+    height: auto;
+    background-color: #1c1f4a;
+    border-radius: 17px; }
+    .container .profile-card .profile-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #5847eb;
+      width: 100%;
+      height: 150px;
+      border-radius: 17px; }
+      .container .profile-card .profile-info img {
+        width: 90px;
+        border-radius: 50%;
+        border: 4px solid white; }
+      .container .profile-card .profile-info p {
+        font-size: 17px;
+        line-height: 1.5;
+        color: #bdc1ff; }
+        .container .profile-card .profile-info p span.user-name {
+          font-size: 27px;
+          color: white;
+          font-weight: 300; }
+    .container .profile-card .profile-duration {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 20px 7px;
+      text-align: center; }
+      .container .profile-card .profile-duration input[type="radio"] {
+        display: none; }
+        .container .profile-card .profile-duration input[type="radio"]:checked + label.input-label {
+          color: white; }
+      .container .profile-card .profile-duration label.input-label {
+        font-size: 18px;
+        color: #6f76c8;
+        cursor: pointer; }
+  .container .card {
+    width: 100%;
+    height: 165px;
+    position: relative;
+    border-radius: 17px;
+    overflow-y: hidden;
+    margin-top: 20px; }
+    .container .card img.card-img {
+      float: right;
+      margin-top: -12px;
+      margin-right: 25px; }
+    .container .card .inner-card {
+      /* z-index: 2; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      padding: 22px;
+      background: #1c1f4a;
+      position: absolute;
+      bottom: 0;
+      border-radius: 17px 17px 0 0;
+      line-height: 1.4;
+      min-height: 130px; }
+      .container .card .inner-card:hover {
+        background: #303782; }
+      .container .card .inner-card .head,
+      .container .card .inner-card .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white; }
+      .container .card .inner-card p.title {
+        font-size: 18px;
+        font-weight: 500; }
+      .container .card .inner-card .content p.curr-time {
+        font-size: 32px;
+        font-weight: 300; }
+      .container .card .inner-card .content p.last-time {
+        font-size: 15px;
+        font-weight: 400;
+        color: #bdc1ff; }
+  .container .light-orange {
+    background: #ff8c66; }
+  .container .light-blue {
+    background: #56c2e6; }
+  .container .light-red {
+    background: #ff5c7c; }
+  .container .light-green {
+    background: #4acf81; }
+  .container .light-purple {
+    background: #7536d3; }
+  .container .light-yellow {
+    background: #f1c65b; }
 
 /*# sourceMappingURL=app.css.map */

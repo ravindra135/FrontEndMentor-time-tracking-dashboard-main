@@ -9,12 +9,12 @@
 /* Variables : Colors */
 /* Primary */
 $primary-blue: hsl(246, 80%, 60%);
-$pri-light-red: hsl(15, 100%, 70%);//(work)
-$pri-soft-blue: hsl(195, 74%, 62%); //(play)
-$pri-red: hsl(348, 100%, 68%);//(study)
-$pri-lime-green: hsl(145, 58%, 55%);//(exercise)
-$pri-violet: hsl(264, 64%, 52%); //(social)
-$pri-soft-orange: hsl(43, 84%, 65%); //(self care)
+$pri-light-red: hsl(15, 100%, 70%);
+$pri-soft-blue: hsl(195, 74%, 62%); 
+$pri-red: hsl(348, 100%, 68%);
+$pri-lime-green: hsl(145, 58%, 55%);
+$pri-violet: hsl(264, 64%, 52%); 
+$pri-soft-orange: hsl(43, 84%, 65%);
 
 /* Neutral */
 $very-dark-blue: hsl(226, 43%, 10%);
@@ -26,4 +26,133 @@ $fs-def: 18px;
 
 body {
     font-family: 'Rubik', sans-serif;
+    background-color: $very-dark-blue;
+}
+
+.container {
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 17px;
+
+    .profile-card {
+        width: 100%;
+        height: auto;
+        background-color: $dark-blue;
+        border-radius: 17px;
+        .profile-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: $primary-blue;
+            width: 100%;
+            height: 150px;
+            border-radius: 17px;
+            img {
+                width: 90px;
+                border-radius: 50%;
+                border: 4px solid white;
+            }
+            p {
+                font-size: 17px;
+                line-height: 1.5;
+                color: $pale-blue;
+                span.user-name {
+                    font-size: 27px;
+                    color: white;
+                    font-weight: 300;
+                }
+            }
+        }
+        .profile-duration {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px 7px;
+            text-align: center;
+            input[type="radio"] {
+                display: none;
+                &:checked + label.input-label {
+                    color: white;
+                }
+            }
+            label.input-label {
+                font-size: 18px;
+                color: $desaturated-blue;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .card {
+        width: 100%;
+        height: 165px;
+        position: relative;
+        border-radius: 17px;
+        overflow-y: hidden;
+        margin-top: 20px;
+        img.card-img {
+            float: right;
+            margin-top: -12px;
+            margin-right: 25px;
+        }
+        .inner-card {
+            /* z-index: 2; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            padding: 22px;
+            background: $dark-blue;
+            position: absolute;
+            bottom: 0;
+            border-radius: 17px 17px 0 0;
+            line-height: 1.4;
+            min-height: 130px;
+            &:hover {
+                background: lighten($color: $dark-blue, $amount: 15%);
+            }
+            .head,
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: white;
+            }
+            p.title {
+                font-size: $fs-def;
+                font-weight: 500;
+            }
+            .content {
+                p.curr-time {
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+                p.last-time {
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: $pale-blue;
+                }
+            }
+            
+        }
+    }
+    .light-orange {
+        background: $pri-light-red;
+    }
+    .light-blue {
+        background: $pri-soft-blue;
+    }
+    .light-red {
+        background: $pri-red;
+    }
+    .light-green {
+        background: $pri-lime-green;
+    }
+    .light-purple {
+        background: $pri-violet;
+    }
+    .light-yellow {
+        background: $pri-soft-orange;
+    }
 }

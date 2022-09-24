@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/app.css">
+  <link rel="stylesheet" href="./styles/app.css"type="text/css">
   <title>Frontend Mentor | Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,68 +16,102 @@
     <div class="profile-card">
       <div class="profile-info">
         <img src="./images/image-jeremy.png" alt="user-avatar">
-        <p>Report for<br><span class="use-name">Jeremy Robson</span></p>
+        <p>Report for<br><span class="user-name">Jeremy Robson</span></p>
       </div>
       <div class="profile-duration">
-        <p>Daily</p>
-        <p>Weekly</p>
-        <p>Monthly</p>
+        <input type="radio" name="timeframe" value="daily" id="daily">
+        <label class="input-label" for="daily">Daily</label>
+        <input type="radio" name="timeframe" value="weekly" id="weekly" checked>
+        <label class="input-label" for="weekly">Weekly</label>
+        <input type="radio" name="timeframe" value="monthly" id="monthly">
+        <label class="input-label" for="monthly">Monthly</label>
+      </div>
+    </div>
+    <!-- Work Card -->
+    <div class="card light-orange">
+      <img class="card-img" src="./images/icon-work.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Play Card -->
+    <div class="card light-blue">
+      <img class="card-img" src="./images/icon-play.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Study Card -->
+    <div class="card light-red">
+      <img class="card-img" src="./images/icon-study.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Exercise Card -->
+    <div class="card light-green">
+      <img class="card-img" src="./images/icon-exercise.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Social Card -->
+    <div class="card light-purple">
+      <img class="card-img" src="./images/icon-social.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- Self Card -->
+    <div class="card light-yellow">
+      <img class="card-img" src="./images/icon-self-care.svg" alt="card-img">
+      <div class="inner-card">
+        <div class="head">
+          <p class="title">Work</p>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="content">
+          <p class="curr-time">32hrs</p>
+          <p class="last-time">Last <span id="type">Week</span> - <span id="duration">36hrs</span></p>
+        </div>
       </div>
     </div>
   </main>
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+  <script src="./app.js"></script>
 </body>
 </html>
