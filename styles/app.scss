@@ -80,6 +80,10 @@ body {
                 font-size: 18px;
                 color: $desaturated-blue;
                 cursor: pointer;
+                &:hover {
+                    transition: all .18s ease-in;
+                    color: white;
+                }
             }
         }
     }

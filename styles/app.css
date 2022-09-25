@@ -56,6 +56,9 @@ body {
         font-size: 18px;
         color: #6f76c8;
         cursor: pointer; }
+        .container .profile-card .profile-duration label.input-label:hover {
+          transition: all .18s ease-in;
+          color: white; }
   .container .card {
     width: 100%;
     height: 165px;
