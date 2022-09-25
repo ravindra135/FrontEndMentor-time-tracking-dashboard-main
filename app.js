@@ -1,4 +1,4 @@
-let data, work, play, study, exercise, social, self_care;
+let data, defaultSelection, work, play, study, exercise, social, self_care;
 let activeTime = '';
 const radioBtns = document.getElementsByName('timeframe');
 const activeTimeFrame = document.querySelectorAll('.type')
@@ -26,9 +26,20 @@ function dataExport() {
     exercise = data.filter((t) => t.title === "Exercise")
     social = data.filter((t) => t.title === "Social")
     self_care = data.filter((t) => t.title === "Self Care")
+
+    if(defaultSelection.checked == true) {
+        updateData(defaultSelection.value)
+    }
 }
 
-radioBtns.forEach(button => {
+radioBtns.forEach((button, index) => {
+    if(button.checked == true) {
+        defaultSelection = button;
+    } else {
+        radioBtns[1].checked = true;
+        defaultSelection = radioBtns[1];
+        timeframeSelected(defaultSelection);
+    }
     button.addEventListener('change', () => {
         timeframeSelected(button);
         updateData(button.value)
@@ -74,7 +85,3 @@ function updateData(time) {
     selfCareDiv.children[0].innerHTML = self_care[0].timeframes[time].current + "hrs"
     selfCareDiv.children[1].children[1].innerHTML = self_care[0].timeframes[time].previous + "hrs"
 }
-
-radioBtns[1].checked = true;
-timeframeSelected(radioBtns[1]);
-// updateData(radioBtns[1].value)

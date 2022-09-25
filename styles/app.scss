@@ -110,6 +110,7 @@ body {
             line-height: 1.4;
             min-height: 130px;
             &:hover {
+                transition: all .23s ease-in;
                 background: lighten($color: $dark-blue, $amount: 15%);
             }
             .head,
@@ -118,6 +119,9 @@ body {
                 align-items: center;
                 justify-content: space-between;
                 color: white;
+            }
+            .head img {
+                cursor: pointer;
             }
             p.title {
                 font-size: $fs-def;

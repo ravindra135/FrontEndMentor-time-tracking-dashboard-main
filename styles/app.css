@@ -81,6 +81,7 @@ body {
       line-height: 1.4;
       min-height: 130px; }
       .container .card .inner-card:hover {
+        transition: all .23s ease-in;
         background: #303782; }
       .container .card .inner-card .head,
       .container .card .inner-card .content {
@@ -88,6 +89,8 @@ body {
         align-items: center;
         justify-content: space-between;
         color: white; }
+      .container .card .inner-card .head img {
+        cursor: pointer; }
       .container .card .inner-card p.title {
         font-size: 18px;
         font-weight: 500; }
