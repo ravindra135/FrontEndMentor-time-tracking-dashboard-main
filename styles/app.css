@@ -117,4 +117,73 @@ body {
   .container .light-yellow {
     background: #f1c65b; }
 
+.attribution {
+  display: none;
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  color: #5847eb;
+  font-size: 12px; }
+  .attribution a:hover {
+    color: white;
+    transition: all .23s ease; }
+
+@media screen and (min-width: 750px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; }
+
+  .container {
+    margin: auto;
+    width: 75%;
+    height: auto;
+    min-height: unset;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+    gap: 15px;
+    align-items: center; }
+    .container .profile-card {
+      grid-row-start: 1;
+      grid-row-end: 4;
+      height: 100%; }
+      .container .profile-card .profile-info {
+        height: 65%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 17px;
+        justify-content: space-between; }
+        .container .profile-card .profile-info img {
+          width: 40%; }
+      .container .profile-card .profile-duration {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 8px; }
+    .container .card {
+      height: 100%;
+      justify-content: flex-start;
+      margin-top: unset; }
+      .container .card .inner-card {
+        min-height: unset;
+        height: 70%; }
+        .container .card .inner-card .content {
+          flex-direction: column;
+          align-items: flex-start; }
+
+  .attribution {
+    display: block; } }
+@media screen and (min-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 240px); }
+    .container .profile-card {
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    .container .card {
+      grid-auto-flow: row; } }
+
 /*# sourceMappingURL=app.css.map */

@@ -164,3 +164,95 @@ body {
         background: $pri-soft-orange;
     }
 }
+
+.attribution {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    color: $primary-blue;
+    font-size: 12px;
+    a {
+        &:hover {
+            color: white;
+            transition: all .23s ease;
+        }
+    }
+}
+@media screen and (min-width: 750px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .container {
+        margin: auto;
+        width: 75%;
+        height: auto;
+        min-height: unset;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+        gap: 15px;
+        // justify-content: center;
+        
+        align-items: center;
+        // min-height: 100vh;
+
+        .profile-card {
+            grid-row-start: 1;
+            grid-row-end: 4;
+            height: 100%;
+
+            .profile-info {
+                height: 65%;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 17px;
+                justify-content: space-between;
+                img {
+                    width: 40%;
+                }
+            }
+            .profile-duration {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                justify-content: space-between;
+                padding: 20px;
+                gap: 8px;
+            }
+        }
+
+        .card {
+            height: 100%;
+            justify-content: flex-start;
+            margin-top: unset;
+            .inner-card {
+                min-height: unset;
+                height: 70%;
+               .content {
+                    flex-direction: column;
+                    align-items: flex-start;
+               } 
+            }
+        }
+    }
+    .attribution {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 240px);
+        .profile-card {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .card {
+            grid-auto-flow: row;
+        }
+    }
+}
